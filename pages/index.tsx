@@ -1,9 +1,16 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
+import React, { useCallback, useState } from "react";
 
-const Splash = dynamic(() => import("../components/splash/Splash"));
+const Splash = dynamic(() => import("../components/splash/Splash"), {
+  ssr: false,
+});
 
 export default function Home() {
+  const [play, setPlay] = useState<boolean>(true);
+  const togglePlay = useCallback(() => {
+    setPlay(!play);
+  }, [play]);
   return (
     <div className="container">
       <Head>
@@ -11,7 +18,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Splash x={50} y={40} width={150} height={220} />
+      <Splash width={500} height={350} play={play} onClick={togglePlay} />
 
       <style jsx global>{`
         html,
@@ -21,6 +28,10 @@ export default function Home() {
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
             Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
             sans-serif;
+          display: grid;
+          align-items: center;
+          justify-items: center;
+          min-height: 100vh;
         }
 
         * {
