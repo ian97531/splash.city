@@ -11,3 +11,4 @@ Additional, I used the following technologies:
 - [Next.js](https://nextjs.org/) and Server Side Rendering
 - [Zeit](https://zeit.co/) for deployments and hosting
 - [React hooks](https://reactjs.org/docs/hooks-intro.html)
+- [Typescript](https://www.typescriptlang.org/)
