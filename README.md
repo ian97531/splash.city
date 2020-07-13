@@ -1,4 +1,5 @@
-# [Splash City](https://splash.city) (Only works on Chrome at the moment)
+# [Splash City](https://splash.city) 
+Only works on Chrome at the moment
 
 Splash City is a water stain simulator that I put together to explore Web Workers and Offscreen Canvas in Typescript. I'm not sure that the result looks much like a water stain, but it neat nonetheless. 
 
