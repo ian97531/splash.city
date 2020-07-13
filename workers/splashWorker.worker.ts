@@ -85,12 +85,10 @@ const computeNextFrame = (time: number) => {
 };
 
 listener.listen(HostMessage.Pause, (evt) => {
-  console.log("pause");
   play = false;
 });
 
 listener.listen(HostMessage.Play, (evt) => {
-  console.log("play");
   play = true;
 
   const nextFrame = (time: number) => {
@@ -104,29 +102,24 @@ listener.listen(HostMessage.Play, (evt) => {
 });
 
 listener.listen(HostMessage.UpdateNoise, (evt) => {
-  console.log("update noise");
   noiseWeight = evt.data.noise;
 });
 
 listener.listen(HostMessage.UpdateLighten, (evt) => {
-  console.log("update lighten");
   lightenMultiplier = evt.data.lighten;
 });
 
 listener.listen(HostMessage.UpdateDarken, (evt) => {
-  console.log("update darken");
   darkenMultiplier = evt.data.darken;
 });
 
 listener.listen(HostMessage.Reset, (evt) => {
-  console.log("reset");
   setAll(image.data, width, height, Color.White);
   setRowColumn(image.data, width, height / 2, width / 2, Color.Black);
   context.putImageData(image, 0, 0);
 });
 
 listener.listen(HostMessage.Init, (evt) => {
-  console.log("init");
   canvas = evt.data.canvas;
   width = evt.data.width;
   height = evt.data.height;
