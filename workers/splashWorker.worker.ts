@@ -76,11 +76,6 @@ const computeNextFrame = (time: number) => {
     }
   }
   addArray(image.data, accumulator, -128);
-  // console.log("accumulator:");
-  // printArray(accumulator, width, height);
-  // console.log("image data:");
-  // printArray(image.data, width, height);
-  // debugger;
   context.putImageData(image, 0, 0);
 };
 

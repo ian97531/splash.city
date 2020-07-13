@@ -113,11 +113,13 @@ export default function Splash(props: ComponentProps) {
   }, []);
 
   return (
-    <div>
+    <div className={styles.Splash}>
+      <h1 className={styles.title}>Splash City</h1>
+      <h2 className={styles.subtitle}>A water stain simulator</h2>
       <canvas
         width={`${width}px`}
         height={`${height}px`}
-        className={clsx(styles.Splash, className)}
+        className={clsx(styles.canvas, className)}
         ref={canvasRef}
         {...elementProps}
       />

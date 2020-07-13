@@ -12,6 +12,10 @@ export default function Home() {
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Kranky&display=swap"
+          rel="stylesheet"
+        />
       </Head>
 
       <Splash width={600} height={450} />
@@ -30,6 +34,8 @@ export default function Home() {
           min-height: 100vh;
           background-color: #455a64;
           color: #ddd;
+          font-family: "Inter", sans-serif;
+          font-weight: 300;
         }
 
         * {
