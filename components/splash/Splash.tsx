@@ -125,7 +125,7 @@ export default function Splash(props: ComponentProps) {
       />
       <div>
         <div className={styles.controlRow}>
-          <label className={styles.label}>Noise Weight: {noise}</label>
+          <label className={styles.label}>Randomness: {noise}</label>
           <input
             className={styles.inputRange}
             type="range"
@@ -137,7 +137,7 @@ export default function Splash(props: ComponentProps) {
           />
         </div>
         <div className={styles.controlRow}>
-          <label className={styles.label}>Darken Multiplier: {darken}</label>
+          <label className={styles.label}>Absorption: {darken}</label>
           <input
             className={styles.inputRange}
             type="range"
@@ -149,7 +149,7 @@ export default function Splash(props: ComponentProps) {
           />
         </div>
         <div className={styles.controlRow}>
-          <label className={styles.label}>Lighten Multiplier: {lighten}</label>
+          <label className={styles.label}>Evaporation: {lighten}</label>
           <input
             className={styles.inputRange}
             type="range"
