@@ -140,7 +140,7 @@ export default function Splash(props: ComponentProps) {
             className={styles.inputRange}
             type="range"
             min="0"
-            max="3"
+            max="1"
             step="0.01"
             onChange={updateDarken}
             value={darken}
@@ -152,7 +152,7 @@ export default function Splash(props: ComponentProps) {
             className={styles.inputRange}
             type="range"
             min="0"
-            max="3"
+            max="1"
             step="0.01"
             onChange={updateLighten}
             value={lighten}
@@ -160,7 +160,7 @@ export default function Splash(props: ComponentProps) {
         </div>
         <div className={styles.buttonRow}>
           <button className={styles.button} onClick={reset}>
-            Reset
+            Clear
           </button>
           <button className={styles.button} onClick={togglePlay}>
             {play ? "Pause" : "Play"}
