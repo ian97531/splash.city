@@ -7,10 +7,6 @@ const Splash = dynamic(() => import("../components/splash/Splash"), {
 });
 
 export default function Home() {
-  const [play, setPlay] = useState<boolean>(true);
-  const togglePlay = useCallback(() => {
-    setPlay(!play);
-  }, [play]);
   return (
     <div className="container">
       <Head>
@@ -18,7 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Splash width={500} height={350} play={play} onClick={togglePlay} />
+      <Splash width={600} height={450} />
 
       <style jsx global>{`
         html,
@@ -32,6 +28,8 @@ export default function Home() {
           align-items: center;
           justify-items: center;
           min-height: 100vh;
+          background-color: #455a64;
+          color: #ddd;
         }
 
         * {
